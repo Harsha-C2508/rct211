@@ -1,0 +1,10 @@
+.homemain{
+  display: flex;
+  height: 100vh;
+}
+.filterpart{
+    width: 40%;
+}
+.musicpart{
+    width: 100%;
+}

@@ -1,0 +1,11 @@
+.main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+}
+/* .album{
+    border: 2px solid greenyellow;
+} */
+.img{
+    width: 80%;
+}
