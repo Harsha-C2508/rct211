@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { getData, addTaskFailure, addTaskRequest, addTaskSuccess } from '../Redux/action'
 
-const TaskInput = () => {
+const TodoInput = () => {
     const [newTask,setNewTask] = useState("");
 
     const dispatch = useDispatch()
@@ -33,4 +33,4 @@ const TaskInput = () => {
   )
 }
 
-export default TaskInput
+export default TodoInput

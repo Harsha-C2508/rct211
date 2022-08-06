@@ -1,0 +1,10 @@
+.title{
+    background-color: royalblue;
+    color: white;
+}
+.items{
+    width: 20%;
+    margin: auto;
+    text-align: left;
+    padding: 5px;
+}

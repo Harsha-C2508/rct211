@@ -1,10 +1,11 @@
 import React from 'react'
-import TaskInput from './TaskInput'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react';
 import { getData } from '../Redux/action';
-
-const Task = () => {
+import TodoInput from './TodoInput';
+import TodoList from './TodoList';
+import Styles from '../style/todo.module.css'
+const Todo = () => {
     const dispatch = useDispatch();
     const  tasks = useSelector((store)=>store.tasks)
 
@@ -14,15 +15,18 @@ const Task = () => {
 console.log(tasks)
   return (
     <div>
-      <div>
-        <h1>TODOS</h1>
+      <div className={Styles.title}>
+        <h1>TODOS APP</h1>
+        <p>List your todos here,happy learning</p>
       </div>
-        <TaskInput/>
+        <TodoInput/>
         {tasks.length > 0 && tasks.map((todo)=>{
-          return <div key={todo.id}>{todo.task}</div>
+          return <div key={todo.id}>
+            <TodoList task={todo.task}/>
+          </div>
         })}
     </div>
   )
 }
 
-export default Task
+export default Todo

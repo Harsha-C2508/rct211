@@ -9,14 +9,14 @@ const init={
 const reducer = (oldState=init,action) =>{
     const { type,payload } = action
     switch(type){
-        case types.GET_TASK_REQUEST:
+        case types.GET_TODOS_REQUEST:
             return {
                 ...oldState,
                 isLoading: true,
                 isError: false
             }
         
-        case types.GET_TASK_SUCCESS:
+        case types.GET_TODOS_SUCCESS:
             return {
                 ...oldState,
                 tasks:payload,
@@ -24,7 +24,7 @@ const reducer = (oldState=init,action) =>{
                 isError: false
             }
         
-        case types.GET_TASK_FAILURE:
+        case types.GET_TODOS_FAILURE:
             return {
                 ...oldState,
                 isLoading: false,

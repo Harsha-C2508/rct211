@@ -1,10 +1,10 @@
 import React from 'react'
-import Task from '../Pages/Task'
+import Todo from '../Pages/Todo'
 
 const Home = () => {
   return (
     <div>
-        <Task/>
+        <Todo/>
     </div>
   )
 }

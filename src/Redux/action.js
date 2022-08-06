@@ -3,20 +3,20 @@ import axios from 'axios'
 //--------------- GET TASK START--------------
 const getTaskRequest = () =>{
     return{
-        type: types.GET_TASK_REQUEST
+        type: types.GET_TODOS_REQUEST
     }
 }
 
 const getTaskSuccess = (payload) =>{
     return{
-        type: types.GET_TASK_SUCCESS,
+        type: types.GET_TODOS_SUCCESS,
         payload,
     }
 }
 
 const getTaskFailure = () =>{
     return{
-        type: types.GET_TASK_FAILURE
+        type: types.GET_TODOS_FAILURE
     }
 }
 //--------------- GET TASK END--------------
@@ -25,20 +25,20 @@ const getTaskFailure = () =>{
 
 const addTaskRequest = () =>{
     return{
-        type: types.ADD_TASK_REQUEST
+        type: types.ADD_TODOS_REQUEST
     }
 }
 
 const addTaskSuccess = (payload) =>{
     return{
-        type: types.ADD_TASK_SUCCESS,
+        type: types.ADD_TODOS_SUCCESS,
         payload,
     }
 }
 
 const addTaskFailure = () =>{
     return{
-        type: types.ADD_TASK_FAILURE
+        type: types.ADD_TODOS_FAILURE
     }
 }
 //--------------- ADD TASK END--------------
