@@ -1,11 +1,13 @@
 .main{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
+    width: 98%;
+    gap: 10px;
 }
-/* .album{
-    border: 2px solid greenyellow;
-} */
+.album{
+    border: 1px solid;
+}
 .img{
     width: 80%;
 }

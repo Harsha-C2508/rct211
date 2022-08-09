@@ -2,6 +2,7 @@ import React from 'react'
 import FilterSort from '../Component/FilterSort'
 import MusicRecords from './MusicRecords'
 import Styles from '../style/home.module.css'
+
 const Home = () => {
   return (
     <div className={Styles.homemain}>

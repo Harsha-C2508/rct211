@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getMusicRecords } from "../Redux/action";
-import { useLocation, useSearchParams } from "react-router-dom";
+import { getMusicRecords } from "../Redux/AppReducer/action";
+import { Link, useLocation, useSearchParams } from "react-router-dom";
 import Styles from '../style/musicrec.module.css'
 const MusicRecords = () => {
   const dispatch = useDispatch();
-  const musicRecords = useSelector((store) => store.musicRecords);
+  const musicRecords = useSelector((store) => store.AppReducer.musicRecords);
   const [searchParams] = useSearchParams();
   const location = useLocation();
 
@@ -28,9 +28,11 @@ const MusicRecords = () => {
       {musicRecords.length > 0 && musicRecords.map(album=>{
         return <div key={album.id} className={Styles.album}>
                   <div>{album.name}</div>
-                  <div>
-                    <img src={album.img} alt={album.name} className={Styles.img}/>
-                  </div>
+                  <Link to={`/music/${album.id}`}>
+                    <div>
+                      <img src={album.img} alt={album.name} className={Styles.img}/>
+                    </div>
+                  </Link>
                   <div>{album.year}</div>
                </div>
       })}
